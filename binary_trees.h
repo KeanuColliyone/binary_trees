@@ -19,10 +19,10 @@ struct binary_tree_s
     struct binary_tree_s *right;
 };
 
-typedef struct binary_tree_s binary_tree_t; // Basic Binary Tree
-typedef struct binary_tree_s bst_t;         // Binary Search Tree
-typedef struct binary_tree_s avl_t;         // AVL Tree
-typedef struct binary_tree_s heap_t;        // Max Binary Heap
+typedef struct binary_tree_s binary_tree_t;
+typedef struct binary_tree_s bst_t;
+typedef struct binary_tree_s avl_t;
+typedef struct binary_tree_s heap_t;
 
 /* Function prototypes */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
