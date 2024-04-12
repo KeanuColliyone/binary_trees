@@ -22,9 +22,9 @@ binary_tree_t *dequeue(binary_tree_t ***queue, size_t *head, size_t *tail)
 {
 	if (*head == *tail)
 	{
-		return NULL;
+		return (NULL);
 	}
-	return (*queue)[(*head)++];
+	return ((*queue)[(*head)++]);
 }
 
 /**
@@ -41,6 +41,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		return;
 
 	queue = malloc(queue_size * sizeof(*queue));
+
 	if (queue == NULL)
 		return;
 
@@ -49,6 +50,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 	while (head < tail)
 	{
 		binary_tree_t *node = dequeue(&queue, &head, &tail);
+
 		func(node->n);
 		if (node->left != NULL)
 			enqueue(&queue, &tail, node->left);
